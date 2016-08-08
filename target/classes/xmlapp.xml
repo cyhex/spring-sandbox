@@ -1,0 +1,17 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+
+    <bean id="service" class="de.cms.demo.Service">
+        <property name="xxx" value="xmlApp"/>
+        <property name="list" ref="list"/>
+    </bean>
+
+    <util:list id="list" value-type="java.lang.String">
+        <array>
+            <value type="java.lang.String">a</value>
+            <value type="java.lang.String">b</value>
+        </array>
+    </util:list>
+</beans>
